@@ -250,10 +250,18 @@ def biblioteca():
             4. Ir al plano
             ''').upper()
     if dirigirse == '1':
+        requerimiento_sillon = 'libro de matematicas'
+        if requerimiento_sillon not in mochila:
+            print('Debes saber derivar')
         pass #ir al sillon
     elif dirigirse == '2':
+        requerimiento_estante = False
         ahorcado() #ir al estante
     elif dirigirse == '3':
+        requerimiento_ gavetero = 'llave'
+        if requerimiento_sillon not in mochila:
+            print('Debes conseguir algo con que abrirme')
+            biblioteca()
         criptograma() #ir al gavetero
     else:
         print(imagenes.plano)
@@ -297,10 +305,17 @@ def rectorado():
             4. Ir al plano
             ''').upper()
     if dirigirse == '1':
+        requerimiento_banco1 = False
         quizzi() #ir al banco 1
     elif dirigirse == '2':
+        requerimiento_saman = 'titulo universitario', 'mensaje'
+        if requerimiento_sillon not in mochila:
+            print('pierdes una vida por pisar el samán 🥵')
+            vidas -= 1
+            rectorado()
         logica() #ir al saman
     elif dirigirse == '3':
+        requerimiento_banco2 = False
         banco_2() #ir al banco 2
     else:
         print(imagenes.plano)
@@ -342,6 +357,10 @@ def puerta():
             3.Ir al plano
             ''').upper()
     if dirigirse == '1':
+        requerimiento_puerta = 'martillo'
+        if requerimiento_puerta not in mochila:
+            print('Está cerrado con candado!!!!!')
+            puerta()
         booleana() #ir a la puerta
     elif dirigirse == '2':
         biblioteca() #ir a la biblioteca
@@ -391,10 +410,16 @@ def cuarto_servidores():
             4. Ir al plano
             ''').upper()
     if dirigirse == '1':
+        requerimiento_rack = False
         palabra_mezclada() #ir al rack
     elif dirigirse == '2':
+        requerimiento_puertalab = 'carnet'
+        if requerimiento_puertalab not in mochila:
+            print('Necesitas tener un carnet de trabajador para poder pasar')
+            cuarto_servidores()
         pass #ir a la puerta 
     elif dirigirse == '3':
+        requerimiento_papelera = False
         escoge_numero() #ir a la papelera
     else:
         print(imagenes.plano)
@@ -442,10 +467,19 @@ def laboratorio():
             4. Ir al plano
             ''').upper()
     if dirigirse == '1':
+        requerimiento_compu1 = 'cable HDMI'
+        if requerimiento_compu1 is not mochila:
+            print('Mi pantalla no funciona')
+            laboratorio()
         python() #ir a computadora 1
     elif dirigirse == '2':
+        requerimiento_pizarra = False
         pizarra() #ir a la pizarra
     elif dirigirse == '3':
+        requerimiento_compu2 = 'contraseña'
+        if requerimiento_compu2 not in mochila:
+            print('necesita contraseña para ingresar')
+            laboratorio()
         adivinanzas() #ir a la computadora 2
     else:
         print(imagenes.plano)
