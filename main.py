@@ -144,6 +144,8 @@ def nivel_uno(jugador, tiempo_inicial): #Inicio del juego mas facil
 
 def nivel_dos(Jugador): #Inicio del juego medio
     vidas = 3
+    if vidas <= 3:
+        print('Te quedaste sin vidas')
     print('''
       Hoy 5 de marzo de 2021, la Universidad sigue en cuarentena (esto no es novedad), 
      lo que sí es novedad es que se robaron un Disco Duro de la Universidad del cuarto
@@ -258,8 +260,8 @@ def biblioteca():
         requerimiento_estante = False
         ahorcado() #ir al estante
     elif dirigirse == '3':
-        requerimiento_ gavetero = 'llave'
-        if requerimiento_sillon not in mochila:
+        requerimiento_gavetero = 'llave'
+        if requerimiento_gavetero not in mochila:
             print('Debes conseguir algo con que abrirme')
             biblioteca()
         criptograma() #ir al gavetero
