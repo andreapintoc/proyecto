@@ -9,9 +9,12 @@ def booleano1():
    ''')
    respuesta1 = input('Escriba la respuesta (False (F) o True (T))').upper() #respuesta: False
    if respuesta1.upper() == 'F':
-       print('Respuesta correcta, haz ganado el cable HDMI')
+       print('Respuesta correcta, haz ganado el libro de Física')
+        premio_puerta = 'libro de fisica'
+        mochila.append(premio_puerta)
    else:
-       print('Incorrecto pierdes media vida')
+       vidas -= 1/2
+       print('Incorrecto pierdes media vida, llevas {vidas} vidas')
 
 def booleano2():
     out = (a and b and a) or (b) or (b or a) or (a and not a and not b)
@@ -21,11 +24,14 @@ def booleano2():
     ''')
     respuesta2= input('Escriba la respuesta (False (F) o True (T))').upper() #respuesta: Tre
     if respuesta2.upper() == 'T':
-       print('Respuesta correcta, haz ganado el cable HDMI')
+       print('Respuesta correcta, haz ganado el libro de Física')
+       premio_puerta = 'libro de fisica'
+       mochila.append(premio_puerta)
     else:
-       print('Incorrecto pierdes media vida')
+       vidas -= 1/2
+       print(f'Incorrecto pierdes media vida, llevas {vidas} vidas')
 
-def main():
+def booleana():
     print('''
     ¡Estas en la puerta!
     Para conseguir el libro de fisica, debes contestar las
@@ -52,5 +58,3 @@ def main():
         booleano1()
     else:
         booleano2()
-
-main()
