@@ -25,8 +25,11 @@ def desplazamiento2():
     respuesta =(str(input('Indique la frase cifrada: ')))
     if respuesta != 'si te graduas pisas el saman':
         print('Incorrecto, pierdes una vida')
+        vidas = vidas - 1
     else:
         print('Haz encontrado el mensaje secreto')
+        premio_gavetero = 'mensaje'
+        mochila.append(premio_gavetero)
 
 def desplazamiento4():
     print('''
@@ -52,8 +55,13 @@ def desplazamiento4():
     respuesta =(str(input('Indique la frase cifrada: ')))
     if respuesta != 'si te graduas pisas el saman':
         print('Incorrecto, pierdes una vida')
+        vidas = vidas - 1
+        print(f'te quedan {vidas} vidas')
     else:
         print('Haz encontrado el mensaje secreto')
+        premio_gavetero = 'mensaje'
+        mochila.append(premio_gavetero)
+
 def desplazamiento5():
     print('''
     ENCUENTRA EL MENSAJE ENCRIPTADO
@@ -78,36 +86,38 @@ def desplazamiento5():
     respuesta =(str(input('Indique la frase cifrada: ')))
     if respuesta != 'si te graduas pisas el saman':
         print('Incorrecto, pierdes una vida')
+        vidas = vidas - 1
+        print(f'te quedan {vidas} vidas')
     else:
         print('Haz encontrado el mensaje secreto')
+        premio_gavetero = 'mensaje'
+        mochila.append(premio_gavetero)
 
-def main():
-   print('''
-    ¡Estas en eel mueble de gavetas!
-    Para obtener el mensaje,
-    debes decifrar el mensaje encriptado
-    PRESIONA > PARA CONTINUAR
-    ''')
-   si = input()
-   while si != '>':
-       print('''
-       ¡Estas en eel mueble de gavetas!
-       Para obtener el mensaje,
-       debes decifrar el mensaje encriptado
-       PRESIONA > PARA CONTINUAR
-       ''')
-       si = input()
-   print('La utilidad de este programa consiste en cifrar o descifrar el texto que introduzca mediante el método César')
-   lista = [1,2,3]
-   elegirr = []
-   elegir = random.sample(lista,1)
-   elegirr.append(elegir)
-   print(elegirr)
-   if elegirr == 1:
-        desplazamiento2()
-   elif elegirr == 2:
-        desplazamiento4()
-   else:
-        desplazamiento5()
-
-main()
+def criptograma():
+    print('''
+      ¡Estas en eel mueble de gavetas!
+      Para obtener el mensaje,
+      debes decifrar el mensaje encriptado
+      PRESIONA > PARA CONTINUAR
+      ''')
+    si = input()
+    while si != '>':
+        print('''
+        ¡Estas en eel mueble de gavetas!
+        Para obtener el mensaje,
+        debes decifrar el mensaje encriptado
+        PRESIONA > PARA CONTINUAR
+        ''')
+        si = input()
+    print('La utilidad de este programa consiste en cifrar o descifrar el texto que introduzca mediante el método César')
+    lista = [1,2,3]
+    elegirr = []
+    elegir = random.sample(lista,1)
+    elegirr.append(elegir)
+    print(elegirr)
+    if elegirr == 1:
+         desplazamiento2()
+    elif elegirr == 2:
+         desplazamiento4()
+    else:
+         desplazamiento5()
