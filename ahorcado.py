@@ -1,4 +1,5 @@
 import random
+
 AHORCADO = ['''
       +---+
       |   |
@@ -89,11 +90,13 @@ def elijeLetra(algunaLetra):
  
 def empezar():
     # Esta funcion devuelve True si el jugador quiere volver a jugar, de lo contrario devuelve False
-    print ('Quieres jugar de nuevo? (Si o No)')
-    return input().lower().startswith('s')
+    print('Presiona > para continuar')
+    presiona = input()
+    #print ('Quieres jugar de nuevo? (Si o No)')
+    #return input().lower().startswith('>')
  
 
-def main():
+def ahorcado():
     print('''
     ¡Estas en la mueble de libros!
     Para conseguir el cable HDMI debes encontrar
@@ -128,13 +131,17 @@ def main():
                     break
             if letrasEncontradas:
                 print ('¡Muy bien! La palabra secreta es "' + palabraSecreta + '"! ¡Has ganado!')
+                premio_estante = 'cable HDMI'
+                mochila.append(premio_estante)
                 finJuego = True
         else:
             letraIncorrecta = letraIncorrecta + letra
+            vidas = len(letraIncorrecta) - 1/4
             # Comprueba la cantidad de letras que ha ingresado el jugador y si perdió
             if len(letraIncorrecta) == len(AHORCADO) - 1:
                 displayBoard(AHORCADO, letraIncorrecta, letraCorrecta, palabraSecreta)
                 print ('¡Se ha quedado sin letras!\nDespues de ' + str(len(letraIncorrecta)) + ' letras erroneas y ' + str(len(letraCorrecta)) + ' letras correctas, la palabra era "' + palabraSecreta + '"')
+                print(f'Te quedan {vidas} vidas')
                 finJuego = True
         # Pregunta al jugador si quiere jugar de nuevo
         if finJuego:
@@ -146,4 +153,3 @@ def main():
             else:
                 break
 
-main()
