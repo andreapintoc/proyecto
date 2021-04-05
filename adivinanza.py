@@ -1,6 +1,7 @@
+
 import random
 lista = [1,2,3]
-numero_vida = 5
+
 
 def adivinanza1():
    pistas1 = ['Lo usas cuando se va la luz', 'Lo puedes prender con un encendedor', 'Es de cera']
@@ -37,12 +38,14 @@ def adivinanza1():
        ''') 
    elif pregunta_uno != "una vela" or pregunta_uno != "vela" or pregunta_uno != "Vela" or pregunta_uno != "la Vela" or pregunta_uno or pregunta_uno !="La Vela" :  
        print('Respuesta incorrecta, pierdes una vida')
-       numero_vida = numero_vida - 1
-       print(' Te quedan ' + str(numero_vida) + ' vidas')
+       vidas = vidas - 1/2
+       print(' Te quedan ' + str(vidas) + ' vidas')
     
    
    else:
        print('¡Buen trabajo!, Respuesta correcta, te has ganado la LLAVE')
+       premio_compu2 = 'llave'
+       mochila.append(premio_compu2)
        
 #    if pregunta_uno == '0':
 #        print('Lo puedes prender con un encendedor')
@@ -67,8 +70,8 @@ def adivinanza1():
 # 
 #else:
 #    print('Respuesta incorrecta, pierdes una vida')
-#    numero_vida = numero_vida - 1
-#    print(' Te quedan ' + str(numero_vida) + ' vidas')
+#    vidas = vidas - 1
+#    print(' Te quedan ' + str(vidas) + ' vidas')
  
 
 
@@ -106,11 +109,13 @@ def adivinanza2():
        ''') 
     elif pregunta_dos != "un bombillo" and pregunta_dos != "bombillo" and pregunta_dos != "El Bombillo" and pregunta_dos != "el bombillo" and pregunta_dos != "Bombillo":
        print('Respuesta incorrecta, pierdes una vida')
-       numero_vida = numero_vida - 1
-       print(' Te quedan ' + str(numero_vida) + ' vidas')
+       vidas = vidas - 1/2
+       print(' Te quedan ' + str(vidas) + ' vidas')
     
     else:
        print('¡Buen trabajo!, Respuesta correcta, te has ganado la LLAVE')
+       premio_compu2 = 'llave'
+       mochila.append(premio_compu2)
 
 
 def adivinanza3():
@@ -147,14 +152,16 @@ def adivinanza3():
         ''') 
     elif pregunta_tres != "un cambur" and pregunta_tres != "cambur" and pregunta_tres != "El Cambur" and pregunta_tres!= "Cambur" and pregunta_tres != "cámbur" and pregunta_tres != "Cámbur":
        print('Respuesta incorrecta, pierdes una vida')
-       numero_vida = numero_vida - 1
-       print(' Te quedan ' + str(numero_vida) + ' vidas')
+       vidas = vidas - 1/2
+       print(' Te quedan ' + str(vidas) + ' vidas')
     
     else:
        print('¡Buen trabajo!, Respuesta correcta, te has ganado la LLAVE')
+       premio_compu2 = 'llave'
+       mochila.append(premio_compu2)
 
 
-def main():
+def adivinanzas():
    
    
    elegir = random.sample(lista,1)
@@ -165,5 +172,3 @@ def main():
        adivinanza3()
    else: 
        adivinanza2()
-
-main()
